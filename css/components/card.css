@@ -1,0 +1,112 @@
+/* ===================================
+=rich text
+=================================== */
+
+/*
+Layout
+
+On utilise grid pour superposer .card-media et .card-text
+- Grid n'imacte que les enfants directs donc on met la grille sur .card-link
+- On dit explicitement que tous les enfants de .card-link (peu importe leur type) doivent se mettre dans entre la ligne 1 et la ligne 2 (colonnes) et entre la ligne 1 et la ligne 2 (row)
+- Le résultat c'est que les colonnes et les rows de la grille sont définies par le positionnement explicite des grid items et pos au niveau de la grille (grid-template-columns, grid-template-rows)
+*/
+
+/*
+Animations
+
+Par defaut
+- .card-text translate sur l'axe des y (30px)
+- .card-text opacité à 0
+
+Une fois le lien .card-link survolé
+- .card-text translate sur l'axe des y (0)
+- .card-text opacité à 1
+
+*/
+
+.card {
+  position: relative;
+}
+
+.card-link {
+  display: grid;
+  text-decoration: none;
+}
+
+/* 
+- créer un élément en début de boite .card-link
+- contenu vide
+- on le place dans la grille
+- on met le dégradé dessus
+*/
+.card-link::before {
+  content: "";
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  z-index: 2;
+
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 15%,
+    transparent
+  );
+}
+
+.card-media {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  /* cacher ce qui dépasse de la boite */
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+.card-image {
+  scale: 1;
+  transition: all 0.2s ease-out;
+
+  a:hover & {
+    scale: 1.05;
+  }
+}
+
+.card-text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  z-index: 3;
+
+  /* on aligne cette cellule de la grille en fin sur l'axe des colonnes */
+  /* https://css-tricks.com/complete-guide-css-grid-layout/ */
+  align-self: end;
+  padding: 1rem;
+
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+
+  translate: 0 30px;
+  opacity: 0;
+
+  transition:
+    translate 0.2s ease-out,
+    opacity 0.2s ease-out;
+
+  /* idem que a:hover .card-text (le & remplace le sélecteur de base quand nesting) */
+  a:hover & {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+.card-name {
+  margin: 0;
+  font-family: var(--fontstack-alt);
+  font-weight: 500;
+  color: var(--color-text-highlight);
+}
+
+.card-role {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
