@@ -1,5 +1,5 @@
 .sitecontent {
-  --sitecontent-margin: clamp(42px, 12vi, 180px);
+  --sitecontent-margin: clamp(42px, 10vi, 120px);
 
   margin-block: var(--sitecontent-margin);
 }
