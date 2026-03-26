@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Magazine - Stories</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <header class="siteheader">
+      <div class="container">
+        <div class="siteheader-content">
+          <p class="siteheader-logo">
+            <a href="/">
+              <img src="img/logo.svg" width="132" height="12" alt="MUSICMAG" />
+            </a>
+          </p>
+          <div class="siteheader-nav">
+            <nav>
+              <ul class="mainnav">
+                <li class="mainnav-item">
+                  <a class="mainnav-link" href="/">Home</a>
+                </li>
+                <li class="mainnav-item">
+                  <a class="mainnav-link" href="/company.html">Company</a>
+                </li>
+                <li class="mainnav-item">
+                  <a class="mainnav-link" href="#">News</a>
+                </li>
+                <li class="mainnav-item">
+                  <a class="mainnav-link" href="stories.html">Stories</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="siteheader-mobilenav">
+            <button
+              type="button"
+              commandfor="mobilemenu"
+              command="show-modal"
+              class="siteheader-hamburger js-navtrigger"
+            >
+              <span class="visually-hidden">Open menu</span>
+              <img src="img/hamburger.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <dialog id="mobilemenu" class="mobilemenu">
+        <div class="mobilemenu-actions">
+          <button
+            type="button"
+            commandfor="mobilemenu"
+            command="close"
+            class="mobilemenu-close js-navtrigger"
+          >
+            <span class="visually-hidden">Close menu</span>
+            <img src="img/hamburger_close.svg" alt="" />
+          </button>
+        </div>
+        <div class="mobilemenu-main">
+          <nav>
+            <ul class="mobilenav">
+              <li class="mobilenav-item">
+                <a class="mobilenav-link" href="/">Home</a>
+              </li>
+              <li class="mobilenav-item">
+                <a class="mobilenav-link" href="/">Home</a>
+              </li>
+              <li class="mobilenav-item">
+                <a class="mobilenav-link" href="/company.html">Company</a>
+              </li>
+              <li class="mobilenav-item">
+                <a class="mobilenav-link" href="/news.html">News</a>
+              </li>
+              <li class="mobilenav-item">
+                <a class="mobilenav-link" href="stories.html">Stories</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </dialog>
+    </header>
+
+    <main class="sitecontent">
+      <div class="section">
+        <div class="container">
+          <h1 class="pagetitle">Stories</h1>
+          <ul class="grid grid-gap grid-2cols-sm grid-3cols-md grid-4cols-lg">
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="keith-richards.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/keith-richards.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Keith Richards"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Keith Richards</h2>
+                    <p class="articlecard-role">Guitar, vocals</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="amy-winehouse.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/amy-winehouse.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Amy Winehouse"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Amy Winehouse</h2>
+                    <p class="articlecard-role">Jazzy singer</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="billie-Eillish.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/billie-eillish.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Bille Eillish"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Bille Eillish</h2>
+                    <p class="articlecard-role">Singer, musician</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="daemon-albarn.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/daemon-albarn.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Daemon Albarn"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Daemon Albarn</h2>
+                    <p class="articlecard-role">Singer, pianist, guitarist</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="prince.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/prince.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Prince"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Prince</h2>
+                    <p class="articlecard-role">Singer, all instruments</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="stromae.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/stromae.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Stromae"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Stromae</h2>
+                    <p class="articlecard-role">Singer, composer</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="angele.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/angele.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Angèle"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Angèle</h2>
+                    <p class="articlecard-role">Singer</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="jeff-buckley.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/jeff-buckley.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Jeff Buckley"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Jeff Buckley</h2>
+                    <p class="articlecard-role">Singer, Guitar player</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="snoop-dogg.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/snoop-dogg.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Snoop Dogg"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Snoop Dogg</h2>
+                    <p class="articlecard-role">Rapper</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="kurt-cobain.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/kurt-cobain.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Kurt Cobain"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Kurt Cobain</h2>
+                    <p class="articlecard-role">Singer, Composer, Guitarist</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="lauren-hill.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/lauren-hill.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="Lauren Hill"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">Lauren Hill</h2>
+                    <p class="articlecard-role">Singer, El boggie</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li>
+              <article class="articlecard">
+                <a class="articlecard-link" href="david-bowie.html">
+                  <div class="articlecard-media">
+                    <img
+                      src="img/cards/david-bowie.jpg"
+                      width="600"
+                      height="800"
+                      class="articlecard-image fluidimg"
+                      alt="David Bowie"
+                    />
+                  </div>
+                  <div class="articlecard-text">
+                    <h2 class="articlecard-title">David Bowie</h2>
+                    <p class="articlecard-role">Singer, Composer</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="sitefooter">
+      <div class="container">
+        <div class="sitefooter-main">
+          <div class="sitefooter-company">
+            <img
+              src="img/logo-big.svg"
+              class="fluidimg"
+              width="187"
+              height="18"
+              loading="lazy"
+              decoding="async"
+              alt="Musicmag"
+            />
+          </div>
+          <div class="sitefooter-nav">
+            <nav>
+              <ul class="footernav">
+                <li class="footernav-item">
+                  <a class="footernav-link" href="/">Home</a>
+                </li>
+                <li class="footernav-item">
+                  <a class="footernav-link" href="/company.html">Company</a>
+                </li>
+                <li class="footernav-item">
+                  <a class="footernav-link" href="#">News</a>
+                </li>
+                <li class="footernav-item">
+                  <a class="footernav-link" href="#">Stories</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="sitefooter-legal">
+            <nav>
+              <ul class="footernav">
+                <li class="footernav-item">
+                  <a class="footernav-link" href="#">Privacy and legal</a>
+                </li>
+                <li class="footernav-item">
+                  <a class="footernav-link" href="#">Copyright</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="sitefooter-end">
+          <p class="sitefooter-copyright">
+            &copy; La Casa Productions / Webstoemp, 2026
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

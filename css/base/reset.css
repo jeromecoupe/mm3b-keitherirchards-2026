@@ -32,3 +32,9 @@ button {
 :where(h1, h2, h3, h4) {
   text-wrap: balance;
 }
+
+/* remettre address en style normal (vs italique) */
+
+address {
+  font-style: normal;
+}

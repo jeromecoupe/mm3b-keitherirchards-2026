@@ -1,0 +1,27 @@
+/* ===================================
+=footer navigation
+=================================== */
+
+.footernav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 3px;
+}
+
+.footernav-link {
+  color: var(--color-text-highlight);
+  transition: color 0.2s ease-out;
+  text-decoration: none;
+
+  &:focus-visible,
+  &:hover {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+  }
+}

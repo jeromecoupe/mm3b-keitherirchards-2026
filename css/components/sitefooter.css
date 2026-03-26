@@ -3,15 +3,52 @@
 =================================== */
 
 .sitefooter {
-  display: block;
+  --sitefooter-gap: 18px;
+
+  container-type: inline-size;
+  container-name: --sitefooter;
+}
+
+.sitefooter-main {
+  padding-block: 60px;
+  border-block-start: 1px solid hsl(from white h s l / 18%);
+
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--sitefooter-gap);
+}
+
+.sitefooter-company {
+  grid-column: 1 / -1;
+
+  @media (width >= 750px) {
+    grid-column: 1 / span 6;
+  }
+}
+
+.sitefooter-nav {
+  grid-column: 1 / -1;
+
+  @media (width >= 750px) {
+    grid-column: 7 / span 3;
+  }
+}
+
+.sitefooter-legal {
+  grid-column: 1 / -1;
+
+  @media (width >= 750px) {
+    grid-column: 10 / span 3;
+  }
+}
+
+.sitefooter-end {
+  padding-block: 18px;
 }
 
 .sitefooter-copyright {
-  /* 
-  - hsl(): fonction de couleur avec transparence et pas de modification de la hue, de la saturation ou de la lightness 
-  - doc: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hsl
-   */
-  border-block-start: 1px solid hsl(from white h s l / 12%);
-  padding-block: 18px;
   margin: 0;
+  padding: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--fontsize-300);
 }

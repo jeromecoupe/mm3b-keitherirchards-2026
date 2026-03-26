@@ -1,0 +1,10 @@
+/* ===================================
+=links
+=================================== */
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 0.3ch;
+}

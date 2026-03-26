@@ -3,10 +3,14 @@
 =================================== */
 
 .container {
-  --container-padding: max(18px, 3vi);
-  --container-max-size: 1500px;
+  --container-padding: 18px;
+  --container-max-size: 1640px;
 
   max-inline-size: var(--container-max-size);
   padding-inline: var(--container-padding);
   margin: 0 auto;
+
+  @media (width >= 750px) {
+    --container-padding: 30px;
+  }
 }

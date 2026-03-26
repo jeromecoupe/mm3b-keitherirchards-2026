@@ -40,7 +40,7 @@
 .siteheader-nav {
   display: none;
 
-  @media (width >= 1024px) {
+  @media (width >= 750px) {
     display: block;
   }
 }
@@ -48,7 +48,7 @@
 .siteheader-mobilenav {
   display: block;
 
-  @media (width >= 1024px) {
+  @media (width >= 750px) {
     display: none;
   }
 }

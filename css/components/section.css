@@ -1,0 +1,13 @@
+/* ===================================
+=section
+=================================== */
+
+.section {
+  --section-padding: clamp(60px, 2.546rem + 5.505vi, 120px);
+
+  padding-block: var(--section-padding);
+}
+
+.section-block + .section-block {
+  margin-block-start: calc(var(--section-padding) / 2);
+}

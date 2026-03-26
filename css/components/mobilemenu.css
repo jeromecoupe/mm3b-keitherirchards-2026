@@ -3,7 +3,8 @@
 =================================== */
 
 .mobilemenu {
-  --mobilemenu-padding: 24px 18px;
+  --mobilemenu-padding-block: 24px;
+  --mobilemenu-padding-inline: 18px;
   --mobilemenu-gap: 18px;
 
   box-sizing: border-box;
@@ -14,7 +15,7 @@
   max-block-size: unset;
   max-inline-size: unset;
   margin: 0;
-  padding: var(--mobilemenu-padding);
+  padding: var(--mobilemenu-padding-block) var(--mobilemenu-padding-inline);
   border: none;
 
   display: grid;
@@ -25,7 +26,8 @@
   block-size: 100%;
   inline-size: 100%;
 
-  background-color: var(--color-accent);
+  background-color: hsl(from var(--color-accent) h s l / 80%);
+  backdrop-filter: blur(30px);
 
   transition:
     opacity 0.2s ease-out,
@@ -64,15 +66,11 @@
 .mobilemenu[open] {
   opacity: 1;
 
-  @media (width >= 1024px) {
+  @media (width >= 750px) {
     display: none;
   }
 
   @starting-style {
     opacity: 0;
   }
-}
-
-.mobilemenu::backdrop {
-  background-color: transparent;
 }

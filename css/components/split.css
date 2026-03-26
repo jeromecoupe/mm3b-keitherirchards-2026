@@ -1,0 +1,54 @@
+/* ===================================
+=split
+=================================== */
+
+.split {
+  --split-colgap: 18px;
+  --split-rowgap: 0;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--split-rowgap) var(--split-colgap);
+}
+
+/* ===================================
+=variants
+=================================== */
+
+.split-half {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.split-1fr2fr {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+
+@media (width >= 500px) {
+  .split-half-sm {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .split-1fr2fr-sm {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+@media (width >= 750px) {
+  .split-half-md {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .split-1fr2fr-md {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+@media (width >= 1024px) {
+  .split-half-lg {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .split-1fr2fr-lg {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}

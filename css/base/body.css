@@ -10,6 +10,6 @@ body {
   font-size: var(--fontsize-400);
 }
 
-body.has-menu {
+body:has(.mobilemenu[open]) {
   overflow-y: hidden;
 }

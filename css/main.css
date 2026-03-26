@@ -10,11 +10,11 @@
 @import "base/fonts.css" layer(base);
 @import "base/body.css" layer(base);
 @import "base/html.css" layer(base);
+@import "base/links.css" layer(base);
 
 /* COMPONENTS: tous les styles liés à des composants bien isolés, fonctionnement avec des classes / des modifiers / etc. */
 @import "components/container.css" layer(components);
 @import "components/siteheader.css" layer(components);
-@import "components/sitecontent.css" layer(components);
 @import "components/sitefooter.css" layer(components);
 @import "components/mainnav.css" layer(components);
 @import "components/grid.css" layer(components);
@@ -28,6 +28,9 @@
 @import "components/richtext.css" layer(components);
 @import "components/modularbody.css" layer(components);
 @import "components/article-card.css" layer(components);
+@import "components/footernav.css" layer(components);
+@import "components/split.css" layer(components);
+@import "components/section.css" layer(components);
 
 /* UTILITIES: classes utilitaires */
 @import "utilities/visuallyhidden.css" layer(utilities);
