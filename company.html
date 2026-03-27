@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Magazine - Stories</title>
+    <title>Music Magazine - Company</title>
+    <meta
+      name="description"
+      content="Music Magazine has headquarters in Brussels and an office in Namur"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <script type="module" src="js/main.js"></script>
   </head>
@@ -86,7 +90,7 @@
           <div class="section-block">
             <div class="split split-half-md">
               <div>
-                <h1 class="pagetitle">About</h1>
+                <h1 class="bigtitle">About</h1>
               </div>
               <div>
                 <p>
@@ -112,13 +116,33 @@
             </div>
           </div>
           <div class="section-block">
-            <h2 class="h1">Contact us</h2>
-            <ul class="grid grid-gap grid-2cols-sm">
+            <h2 class="h1">Our Offices</h2>
+            <ul class="grid grid-gap grid-2cols-md">
               <li>
                 <article class="office">
-                  <div class="office-media"></div>
+                  <div class="office-media">
+                    <a
+                      class="office-link"
+                      href="https://maps.app.goo.gl/a7ZsAGyroxGfKVBEA"
+                    >
+                      <img
+                        srcset="
+                          img/offices/office-bxl-600.jpg   600w,
+                          img/offices/office-bxl-1024.jpg 1024w
+                        "
+                        src="img/offices/office-bxl-600.jpg"
+                        sizes="(min-width: 750px) 50vw, 100vw"
+                        class="fluidimg"
+                        width="1024"
+                        height="768"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Brussels in the sun (for once)"
+                      />
+                    </a>
+                  </div>
                   <div class="office-content">
-                    <h3>Brussels Headquarters</h3>
+                    <h3 class="office-title">Brussels Headquarters</h3>
                     <address>
                       <p>
                         Place du marché au fleurs, 12<br />
@@ -131,7 +155,47 @@
                 </article>
               </li>
               <li>
-                <article></article>
+                <article class="office">
+                  <div class="office-media">
+                    <a
+                      class="office-link"
+                      href="https://maps.app.goo.gl/Y92yWWkipVrMUFp46"
+                    >
+                      <img
+                        srcset="
+                          img/offices/office-namur-600.jpg   600w,
+                          img/offices/office-namur-1024.jpg 1024w
+                        "
+                        src="img/offices/office-namur-600.jpg"
+                        sizes="(min-width: 750px) 50vw, 100vw"
+                        class="fluidimg"
+                        width="1024"
+                        height="768"
+                        loading="lazy"
+                        decoding="async"
+                        alt="Namur along the water"
+                      />
+                    </a>
+                  </div>
+                  <div class="office-content">
+                    <h3 class="office-title">Namur office</h3>
+                    <address>
+                      <p>
+                        Rue de La Plage 20<br />
+                        5100 Namur<br />
+                        Belgium
+                      </p>
+                      <ul class="vlist">
+                        <li><a href="tel:00322333444">+32 02 333 444</a></li>
+                        <li>
+                          <a href="https://maps.app.goo.gl/Y92yWWkipVrMUFp46">
+                            Directions
+                          </a>
+                        </li>
+                      </ul>
+                    </address>
+                  </div>
+                </article>
               </li>
             </ul>
           </div>

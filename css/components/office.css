@@ -1,0 +1,135 @@
+/* ===================================
+=office
+=================================== */
+
+.office-media {
+  margin-block-end: 36px;
+}
+
+.office-title {
+  color: var(--color-text-highlight);
+  font-weight: 500;
+  font-size: var(--fontsize-600);
+  line-height: 1.2;
+  font-family: var(--fontstack-main);
+  margin-block-end: 0.5em;
+}
+
+/* 
+positionner le ::before et l'image les uns sur les autres avec grid
+- on crée une grille sans préciser ls rangées et les colonnes
+- on cale le before et l'image dans la colonne qui va de la ligne 1 à la ligne 2
+- on cale le before et l'image dans la rangée qui va de la ligne 1 à la ligne 2 
+*/
+
+.office-link {
+  display: grid;
+}
+
+.office-link::before {
+  content: "";
+  background-color: var(--color-accent);
+  mix-blend-mode: multiply;
+
+  z-index: 2;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease-out;
+}
+
+.office-link:hover::before {
+  opacity: 1;
+}
+
+/* easing preview and generator: https://easingwizard.com/ */
+.office-link::after {
+  --icon-size: 60px;
+  --icon-easing: linear(
+    0,
+    0.402 7.4%,
+    0.711 15.3%,
+    0.929 23.7%,
+    1.008 28.2%,
+    1.067 33%,
+    1.099 36.9%,
+    1.12 41%,
+    1.13 45.4%,
+    1.13 50.1%,
+    1.111 58.5%,
+    1.019 83.2%,
+    1.004 91.3%,
+    1
+  );
+
+  content: "";
+  inline-size: var(--icon-size);
+  block-size: var(--icon-size);
+  background-image: url(../../img/icon-location.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  z-index: 3;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  place-self: center;
+
+  opacity: 0;
+  translate: 0 60px;
+
+  transition:
+    opacity 0.3s var(--icon-easing),
+    translate 0.3s var(--icon-easing);
+}
+
+.office-link:hover::after {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.office-link img {
+  transition: filter 0.2s ease-out;
+
+  z-index: 1;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.office-link:hover img {
+  filter: grayscale(1);
+}
+
+/*
+positionner le ::before et l'image les uns sur les autres avec position absolute
+- un élément positionné absolument l'est toujours par rapport à son ancêtre le plus proche qui est positionné explicitement
+- on positionne le .office-link en relatif (comme cela il est explivitement positionné mais pas bougé)
+- on positionne le before en absolu
+  - cela le sort du flux du document (comme un nouveau calque dans photoshop)
+  - inset: 0; (raccourci pour top, left, right et bottom à 0)
+- l'image reste positionnée comme elle l'était (statique)
+
+
+.office-link {
+  position: relative;
+}
+
+.office-link::before {
+  content: "";
+  background-color: red;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.office-link img {
+  transition: filter 0.2s ease-out;
+}
+
+.office-link:hover img {
+  filter: grayscale(1);
+}
+
+*/
